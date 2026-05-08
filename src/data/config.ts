@@ -9,7 +9,7 @@ export const config = {
   siteUrl: 'https://savyasachi.dev',
   metaDescription: 'Software Engineer with 8 years of experience and a focus on Backend Engineering. Based in San Jose, CA.',
   social: {
-    github: 'https://github.com/savyasachi16',
+    github: 'https://github.com/jsavyasachi',
     linkedin: 'https://linkedin.com/in/jsavyasachi/',
     email: 'jsavyasachi@gmail.com',
   },

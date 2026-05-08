@@ -2,7 +2,7 @@
 
 Owner: Savyasachi Jagadeeshan (jsavyasachi@gmail.com)
 Live: https://savyasachi.dev
-Repo: github.com/savyasachi16/folio
+Repo: github.com/jsavyasachi/folio
 
 ## Stack
 
@@ -34,7 +34,7 @@ src/layouts/BaseLayout.astro
 src/pages/index.astro   - imports all sections in order
 src/pages/api/spotify.ts - serverless, prerender=false
 src/styles/global.css   - @import tailwindcss + :root vars + dot grid + orb keyframe
-public/resume.pdf        - linked from Hero (not yet added - user will drop it in)
+public/resume.pdf        - redacted resume linked from Hero and Footer
 docs/spotify-setup.md   - Spotify OAuth setup instructions
 ```
 
@@ -60,7 +60,7 @@ Edit `src/data/projects.ts`. Card grid is data-driven.
 Edit `src/data/skills.ts`.
 
 ### Replace resume
-Drop new PDF at `public/resume.pdf` (keep filename).
+Run `python scripts/redact_resume.py <source-pdf>` to write the public copy to `public/resume.pdf`.
 
 ### Set up contact form
 Replace `FORM_ID` in `src/components/sections/Contact.astro` with real Formspree ID.

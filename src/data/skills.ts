@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: 'Web Technologies',
-    skills: ['Jetty', 'Nginx', 'Apache Kafka', 'REST API', 'Grails', 'Node.js', 'mutual TLS'],
+    skills: ['Jetty', 'Nginx', 'Apache Kafka', 'REST API', 'JSON', 'gRPC', 'Grails', 'Node.js', 'mutual TLS'],
   },
   {
     label: 'Databases',
@@ -18,6 +18,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: 'Tools & Infrastructure',
-    skills: ['Claude Code', 'Docker', 'Kubernetes', 'Argo', 'Splunk', 'AWS', 'Sumo Logic', 'Bash', 'Git', 'JMeter'],
+    skills: ['Claude Code', 'Docker', 'Kubernetes', 'Argo', 'Splunk', 'AWS', 'Sumo Logic', 'Bash scripting', 'Git', 'Datadog'],
   },
 ];

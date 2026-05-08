@@ -6,18 +6,6 @@
 
 ---
 
-## Use this template
-
-1. Fork or clone this repo
-2. Fill in **`src/data/config.ts`** - your name, bio, social links, Goodreads user ID
-3. Replace content in `src/data/` - `experience.ts`, `projects.ts`, `skills.ts`, `education.ts`
-4. Drop your resume at `public/resume.pdf`
-5. Deploy to Vercel (see below)
-
-That's it for a basic setup. Spotify now-playing is optional - see **Integrations** below.
-
----
-
 ## Stack
 
 <a href="https://astro.build"><img src="https://img.shields.io/badge/Astro-FF5D01?style=flat&logo=astro&logoColor=white" alt="Astro" /></a>
@@ -27,6 +15,18 @@ That's it for a basic setup. Spotify now-playing is optional - see **Integration
 <a href="https://vercel.com"><img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white" alt="Vercel" /></a>
 <a href="https://www.spotify.com"><img src="https://img.shields.io/badge/Spotify_API-1DB954?style=flat&logo=spotify&logoColor=white" alt="Spotify" /></a>
 <a href="https://www.goodreads.com"><img src="https://img.shields.io/badge/Goodreads_RSS-F4F1EA?style=flat&logo=goodreads&logoColor=372213" alt="Goodreads" /></a>
+
+---
+
+## Use this template
+
+1. Fork or clone this repo
+2. Fill in **`src/data/config.ts`** - your name, bio, social links, Goodreads user ID
+3. Replace content in `src/data/` - `experience.ts`, `projects.ts`, `skills.ts`, `education.ts`
+4. Run `python scripts/redact_resume.py <your-pdf>` to write `public/resume.pdf`
+5. Deploy to Vercel (see below)
+
+That's it for a basic setup. Spotify now-playing is optional - see **Integrations** below.
 
 ---
 
