@@ -34,10 +34,18 @@ const MONOGRAM_ICON: Record<string, string> = {
 ---
 
 <article
-  class="project-card flex flex-col gap-4 p-6 rounded-xl border backdrop-blur-sm"
+  class="project-card relative flex flex-col gap-4 p-6 rounded-xl border backdrop-blur-sm"
   style={`--card-color: ${color}; --card-glow: ${glow};`}
 >
-  <div class="flex items-start justify-between gap-4">
+  <a
+    href={project.githubUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="project-card-stretched"
+    aria-label={`GitHub: ${project.title}`}
+  ></a>
+
+  <div class="project-card-content flex items-start justify-between gap-4">
     <h3 class="font-semibold" style="font-family: 'Syne', sans-serif; color: var(--card-color);">
       {project.title}
     </h3>
@@ -52,9 +60,9 @@ const MONOGRAM_ICON: Record<string, string> = {
     </a>
   </div>
 
-  <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">{project.description}</p>
+  <p class="project-card-content text-sm leading-relaxed" style="color: var(--color-text-muted);">{project.description}</p>
 
-  <div class="flex flex-wrap gap-2 mt-auto">
+  <div class="project-card-content flex flex-wrap gap-2 mt-auto">
     {project.techStack.map((tech) => {
       const slug = ICON_SLUG[tech];
       const monogram = MONOGRAM_ICON[tech];
@@ -92,7 +100,7 @@ const MONOGRAM_ICON: Record<string, string> = {
       href={project.liveUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="text-xs hover:underline"
+      class="project-card-live text-xs hover:underline"
       style="color: var(--card-color);"
     >
       Live site ↗
@@ -105,7 +113,31 @@ const MONOGRAM_ICON: Record<string, string> = {
     background: color-mix(in srgb, var(--color-surface) 70%, transparent);
     border-color: var(--color-border);
     box-shadow: 0 0 0 transparent;
+    cursor: pointer;
     transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .project-card-stretched {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+  }
+  .project-card-stretched:focus-visible {
+    outline: 2px solid var(--card-color);
+    outline-offset: 3px;
+  }
+  .project-card-content,
+  .project-card-github,
+  .project-card-live {
+    position: relative;
+    z-index: 1;
+  }
+  .project-card-content {
+    pointer-events: none;
+  }
+  .project-card-github,
+  .project-card-live {
+    pointer-events: auto;
   }
   .project-card:hover {
     border-color: var(--card-color);
