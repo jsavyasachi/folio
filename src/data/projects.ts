@@ -50,6 +50,14 @@ export const projects: Project[] = [
     color: '#f7e57e',
   },
   {
+    title: 'tmux-auto-name',
+    description: 'AI-powered tmux window auto-renamer using a local LLM via Ollama.',
+    techStack: ['Bash', 'tmux', 'Ollama', 'Qwen 2.5'],
+    githubUrl: 'https://github.com/jsavyasachi/tmux-auto-name',
+    featured: true,
+    color: '#a07ef7',
+  },
+  {
     title: 'folio',
     description: 'You\'re looking at it. This card is about the site that contains this card.',
     techStack: ['Astro', 'Tailwind CSS', 'TypeScript'],
