@@ -19,5 +19,8 @@
     "@vercel/speed-insights": "^2.0.0",
     "astro": "^6.1.4",
     "tailwindcss": "^4.2.2"
+  },
+  "overrides": {
+    "path-to-regexp": "6.3.0"
   }
 }
